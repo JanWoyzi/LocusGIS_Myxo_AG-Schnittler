@@ -19,24 +19,22 @@ Empty cells indicate information that has not yet been established. Required sta
 | Parameter | Expected entry or configured value | Required | Description |
 |---|---|---|---|
 | `Accession` | Automatically numbered integer; starts at `1`; editable | Yes | Accession number; used as the primary display attribute and map label. |
-| `Box` | Integer | Yes | |
+| `Box` | Integer | Yes | number of boxes with the same accession number. |
 | `Species` | Text | Yes | Species entry. |
-| `Location` | Select one: `Loc01`, `Loc02` | No | Location code. |
-| `Size` | Integer | No | |
-| `Sub_type` | Select one: `tw`, `lh`, `ll` | No | |
-| `Sub_art` | Text | No | |
-| `Life` | Boolean (`true` or `false`); default `false` | No | |
-| `Height_cm` | Integer | No | |
-| `Snow_dist_m` | Integer | No | |
-| `Date` | Date; default `CURRENT_TIME` | Yes | Date field; automatic updating is disabled. |
+| `Location` | Select one: `Loc01`, `Loc02` | No | Personalized location code. |
+| `Size` | Integer | No | Estimate of colony size. |
+| `Sub_type` | Select one: `tw`, `lh`, `ll` | No | Substrate type on which the colony was found: tw = twig, lh = , ll =  |
+| `Sub_art` | Text | No | Species name of substrate if possible. |
+| `Life` | Boolean (`true` or `false`); default `false` | No | Is substrate alive or dead? |
+| `Height_cm` | Integer | No | Height (in cm) of the colony, measured from the ground. |
+| `Snow_dist_m` | Integer | No | Distance to the next snow edge or patch in meters. |
+| `Date` | Date; default `CURRENT_TIME` | Yes | Date field; automatic. |
 | `X_coordinate` | Geometry-derived X coordinate | Yes | Expression transforms the geometry to CRS `4326`, extracts X, and rounds to eight decimal places. |
 | `Y_coordinate` | Geometry-derived Y coordinate | Yes | Expression transforms the geometry to CRS `4326`, extracts Y, and rounds to eight decimal places. |
 | `XY_prec` | Locus GIS horizontal-accuracy field (`ACCURACY_HOR_AVG`) | No | |
 | `Elevation` | Geometry-derived Z coordinate | No | Expression extracts Z from the geometry and rounds to two decimal places. |
 | `Elev_prec` | Locus GIS vertical-accuracy field (`ACCURACY_VER_AVG`) | No | |
-| `Remark` | Text | No | Remarks. |
-| `lg_attach` | Text | No | |
-| `lg_created` | Text | No | |
+| `Remark` | Text | No | Place for remarks. |
 
 ## Use with multiple collectors
 
